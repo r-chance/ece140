@@ -1,0 +1,25 @@
+<!-- WEBMADLIB/templates/layout.html -->
+
+<!doctype html>
+<html>
+    
+    <head>
+        <title>WEB MAD-LIB</title>
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static',filename='WEBMADLIB.css') }}">
+    </head>
+    <center>
+    <body>
+        {% block body %}
+        {% endblock %}
+
+        <button onclick=button1() class="button">Amazon</button>
+        <button onclick=button2() class="button button2">Apple</button>
+        <button onclick=button3() class="button button3">Netflix</button>
+        <button onclick=button4() class="button button4">Tesla</button>
+
+        {% block body2 %}
+        {% endblock %}
+
+    </body>
+    </center>
+</html>

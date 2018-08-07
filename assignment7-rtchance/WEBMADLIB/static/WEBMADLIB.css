@@ -1,0 +1,69 @@
+/* WEBMADLIB/static/dashboard.css */
+
+.lw {
+	font-size: 60px;
+	background: blue;
+	color: white;
+}
+
+body { 
+  background-color: cyan;
+
+}
+
+span {
+    display:inline;
+}
+
+.button{
+    background-color: #FFFFFF;
+    border: none;
+    border-radius: 35%;
+    color: #FFA500;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button2 {
+    background-color: #000000;
+    border: none;
+    color: #ffffff;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button3 {
+    background-color: #bf0000;
+    border: none;
+    color: white;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}
+
+.button4 {
+    background-color: #ffffff;
+    border: none;
+    color: #bf0000;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+}

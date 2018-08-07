@@ -1,0 +1,38 @@
+<!-- WEBMADLIB/templates/madlib.html -->
+{% extends "layout.html" %}
+
+  {% block body %}
+
+    <h1> The Four Horsemen of the Economic Apocalypse </h1>
+
+  {% endblock %}
+
+  {% block body2 %}
+    <div id = "madlib"> </br>
+      <h2 id = "business_name">________</h2> is a
+      <span id = "business_type">________</span> that serves
+      <span id = "market_type">________</span> who need
+      <span id = "job_to_be_done">________</span>. We will generate revenue using a
+      <span id = "revenue_model">________</span> model.</div>
+
+
+    <script>
+
+      function button(name) {
+          fetch('/horsemen/'+name).then(response => response.json()).then(function(response) { for (var key in response) {
+                   console.log(key)
+                    if(key != "id") {
+                        document.getElementById(key).innerHTML=response[key]
+                    }
+              }
+                                                                                            
+           })
+                                                                                               
+                                                                                               
+        var a = document.getElementById("business_name")
+        a.style.display = "block"
+      }
+
+    </script>   
+  {% endblock %}
+

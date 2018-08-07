@@ -1,0 +1,106 @@
+<!doctype html>
+<html>
+    <head>
+    <style>
+      table {
+        width: 40%;
+        border: 1px solid black;
+      }
+      td {
+      //  border: 1px solid black;
+      }
+
+    </style>  
+      <link rel="shortcut icon" href="">
+        <title>ECE 140a Lab 4</title>
+        <!-- Bootstrap CSS CDN -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        
+                <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.css">
+        
+    </head>
+        <nav class="navbar navbar-inverse bg-dark">
+        <h2 style="color: white">ECE 140a Lab #5: Sensor Data Dashboard</h2>
+<ul class="nav nav-pills nav-fill">
+
+    <li class="nav-item">
+	  <button class="nav-link" onclick=plantInfo()>Get Plant Information</button>
+  </li>
+
+    <li class="nav-item">
+	  <button class="nav-link" onclick=getData('MCP',document.getElementById("slidebar").value) >Light Sensor</button>
+  </li>
+  <li class="nav-item">
+	  <button class="nav-link"  onclick=getData("DHT",document.getElementById("slidebar").value) >Temperature & Humidity Sensor</button>
+  </li>
+  <li class="nav-item">
+    <button class="nav-link" onclick=getData("SS",document.getElementById("slidebar").value)>Sound Sensor</button>
+  </li>
+</ul>
+        </nav>
+  
+    <body style="background-color:green;">
+      <img style="float: right; margin: 40px 40px 0px 0px;" src="{{ url_for('static',filename='goldenpothos.jpeg')}}" width="600">
+    <div id=plantWindow style="display: none;">
+
+      <h1>Golden Pothos (Devil's Ivy)</h1>
+
+      <table>
+        <tr>
+          <th> Recommended hours of sunlight per day </th>
+          <th> Recommended amount of water per day </th>
+          <th> Recommended temperature in &#8451; (&#8457;)</th>
+        </tr>
+        <tr>
+          <td> 12-14 hours </td>
+          <td> Water lightly</td>
+          <td> 18-28 (65-82) </td>
+        </tr>
+      </table>
+    </div>
+
+    <h1 id=loadingMessage>Please click on a button to display sensor readings.</h1>
+
+    <h1 id=dbheader></h1>
+    <div id=disclaimer style="display: none;">
+    <p style="color:red" style="font-size:8px">*Values in red are outside the acceptable tolerance for your plant</p></div>
+ 
+    <div class="slidecontainer" id="slidercontainer" style="display: none;">
+      <p> Select the number of sensor readings to display. (Click sensor buttons to refresh) </p>
+      <input type="range" min="1" max="60" value="10"  id="slidebar">
+      <p> Number of records displayed: </p>
+      <div id="slidervalue"></div>
+    </div>     
+
+    <table width="100%" id='data1' style="background-color:lime;"></table>
+
+
+        {% block body %}
+    
+    
+        {% endblock %}
+    <!--- insert footer anything here -->
+    <!-- SCRIPTS -->    
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.bundle.min.js" integrity="sha384-feJI7QwhOS+hwpX2zkaeJQjeiwlhOP+SdQDqhgvvo1DsjtiSQByFdThsxO669S2D" crossorigin="anonymous"></script>
+        
+
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.7.1/Chart.min.js"></script>
+
+       <script type="text/javascript" src="http://code.jquery.com/jquery-1.7.1.min.js"></script>
+
+        
+
+
+
+        <!-- Latest compiled and minified JavaScript -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/bootstrap-table.min.js"></script>
+
+        <!-- Latest compiled and minified Locales -->
+        <script src="//cdnjs.cloudflare.com/ajax/libs/bootstrap-table/1.11.1/locale/bootstrap-table-zh-CN.min.js"></script>    
+        
+        <script src="/static/js/lab5.js"></script>
+    </body>
+</html>
+

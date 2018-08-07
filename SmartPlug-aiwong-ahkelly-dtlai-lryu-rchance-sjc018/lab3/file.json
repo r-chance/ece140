@@ -1,0 +1,1 @@
+data = '[{"timestamp" : "0", "celsius" : "60", "fahrenheit" : "80", "humidity" : "20","envelope" : "100"}]';

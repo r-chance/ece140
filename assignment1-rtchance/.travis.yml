@@ -1,0 +1,12 @@
+notifications:
+    email: false
+language: python
+python:
+    - "3.6"
+before_install:
+    - git clone https://$CI_USER_TOKEN@github.com/UCSD-Product-Engineering/assignment1_answer.git
+    - cp assignment1_answer/test.py test.py
+    - touch __init__.py
+script: 
+    - python profanity.py
+    - python test.py 

@@ -1,0 +1,2 @@
+graft WEBMADLIB/templates
+graft WEBMADLIB/static

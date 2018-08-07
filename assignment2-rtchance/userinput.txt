@@ -1,0 +1,8 @@
+six
+seventy two
+twenty five times ten
+three plus three
+five minus one
+zero
+nine divided by zero
+eighty eight divided by forty four

@@ -1,0 +1,129 @@
+<!-- WEBMADLIB/templates/madlib.html -->
+{% extends "layout.html" %}
+
+  {% block body %}
+
+    <h1> The Four Horsemen of the Economic Apocalypse </h1>
+
+  {% endblock %}
+
+  {% block body2 %}
+    
+    <p id="amazon" style="display: none"> {{entries[0].business_name}} is a {{entries[0].business_type}} that serves the {{entries[0].market_type}} who need {{entries[0].job_to_be_done}}. We will generate revenue using {{entries[0].revenue_model}}.</p>
+    
+    <p id="apple" style="display: none"> {{entries[1].business_name}} is a {{entries[1].business_type}} that serves the {{entries[1].market_type}} who need {{entries[1].job_to_be_done}}. We will generate revenue using {{entries[1].revenue_model}}.</p>
+    
+    <p id="netflix" style="display: none"> {{entries[2].business_name}} is a {{entries[2].business_type}} that serves the {{entries[2].market_type}} who need {{entries[2].job_to_be_done}}. We will generate revenue using {{entries[2].revenue_model}}.</p>
+    
+    <p id="tesla" style="display: none"> {{entries[3].business_name}} is a {{entries[3].business_type}} that serves the {{entries[3].market_type}} who need {{entries[3].job_to_be_done}}. We will generate revenue using {{entries[3].revenue_model}}.</p>
+
+    <script>
+
+      function button1() {
+
+        var a = document.getElementById("apple");
+        var b = document.getElementById("netflix");
+        var c = document.getElementById("tesla");
+
+        if(a.style.display === "block") {
+          a.style.display = "none";
+        }
+        
+        if(b.style.display === "block") {
+          b.style.display = "none";
+        }
+
+        if(c.style.display === "block") {
+          c.style.display = "none";
+        }
+
+        var x = document.getElementById("amazon");
+        if(x.style.display ==="none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+
+      function button2() {
+
+        var a = document.getElementById("amazon");
+        var b = document.getElementById("netflix");
+        var c = document.getElementById("tesla");
+
+        if(a.style.display === "block") {
+          a.style.display = "none";
+        }
+        
+        if(b.style.display === "block") {
+          b.style.display = "none";
+        }
+
+        if(c.style.display === "block") {
+          c.style.display = "none";
+        }
+
+        var x = document.getElementById("apple");
+        if(x.style.display ==="none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+
+      function button3() {
+
+        var a = document.getElementById("amazon");
+        var b = document.getElementById("apple");
+        var c = document.getElementById("tesla");
+
+        if(a.style.display === "block") {
+          a.style.display = "none";
+        }
+        
+        if(b.style.display === "block") {
+          b.style.display = "none";
+        }
+
+        if(c.style.display === "block") {
+          c.style.display = "none";
+        }
+
+        var x = document.getElementById("netflix");
+
+        if(x.style.display ==="none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+
+      function button4() {
+
+        var a = document.getElementById("amazon");
+        var b = document.getElementById("apple");
+        var c = document.getElementById("netflix");
+        
+        if(a.style.display === "block") {
+          a.style.display = "none";
+        }
+        
+        if(b.style.display === "block") {
+          b.style.display = "none";
+        }
+
+        if(c.style.display === "block") {
+          c.style.display = "none";
+        }
+
+        var x = document.getElementById("tesla");
+        if(x.style.display ==="none") {
+          x.style.display = "block";
+        } else {
+          x.style.display = "none";
+        }
+      } 
+
+    </script>   
+  {% endblock %}
+
